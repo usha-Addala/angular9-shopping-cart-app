@@ -1,0 +1,22 @@
+.thumbnail {
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	background-size: cover;
+}
+
+button {
+	cursor: pointer;
+}
+
+p {
+	max-width: 80%;
+}
+
+p button {
+	float: right;
+}
+
+.va-m {
+	vertical-align: middle;
+}

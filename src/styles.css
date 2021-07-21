@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body{
+	padding-top: 80px;
+	background-color: #A4C4B5;
+}
+
+button {
+	cursor: pointer;
+}
+
+button[disabled] {
+	cursor: not-allowed;
+}
+
+.fixed-top {
+	z-index: 999;
+}
+
+.bold{
+	font-weight: bold !important;
+}
+.p0{
+
+ padding: 0px;
+}

@@ -1,0 +1,23 @@
+
+
+button {
+	border-radius: 50px;
+}
+
+.loginPage{
+	width: 35%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 60px;
+    border-radius: 20px;
+	height: 380px;
+}
+.loginPage p{
+	font-weight: 700;
+}
+.loginBtn{
+	margin-top: 100px;
+}
+.loginBtn button span{
+	padding-left: 5px;
+}

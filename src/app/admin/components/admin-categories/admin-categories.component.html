@@ -1,0 +1,30 @@
+<form class="form-inline" #c="ngForm" (ngSubmit)="save(c.value)">
+  <div class="form-group mx-sm-3 mb-2">
+    <input type="text" class="form-control" #cname="ngModel" [(ngModel)]="category.name" 
+    name="name" placeholder="Category Name" required />
+  </div>
+  <button [disabled]="c.invalid" class="btn btn-primary mb-2">Add Category</button>
+</form>
+<hr>
+<table class="table" *ngIf="categories$ | async as categories">
+	{{spinnerService.hide()}}
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Operation</th>
+		</tr> 
+	</thead>
+	<tbody>
+		<tr *ngIf="categories.length == 0" class="text-center">
+			<td colspan="2">No Categories Found</td>
+		</tr>
+		<tr *ngFor="let category of categories | paginate: { itemsPerPage: 10, currentPage: p }">
+			<td>{{category.name}}</td>
+			<td>
+				<a href="Javascript:void(0)" (click)="deleteCategoryCheck(category)">Delete</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<pagination-controls *ngIf="categories$ | async as categories" (pageChange)="p = $event"  autoHide="true"></pagination-controls>
+<ng4-loading-spinner [loadingText]="'Loading...'"> </ng4-loading-spinner>

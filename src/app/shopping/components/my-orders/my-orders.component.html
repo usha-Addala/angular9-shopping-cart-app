@@ -1,0 +1,24 @@
+<h1>Orders</h1>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Date of Purchase</th>
+			<th>Status</th>
+			<th>Operation</th>
+		</tr>
+	</thead>
+	<tbody *ngIf="orders$ | async as orders">
+		<tr *ngFor="let order of orders | paginate: { itemsPerPage: 10, currentPage: p }">
+			{{ spinnerService.hide() }}
+			<td>{{ order.datePlaced }}</td>
+			<td>{{ order.status }}</td>
+			<td><a href="javascript:void(0)" (click)="orderDetails(order.$key)">Order Details</a></td>
+		</tr>
+		<tr *ngIf="orders.length === 0">
+			{{ spinnerService.hide() }}
+			<td class="text-center" colspan="3">No Orders Placed</td>
+		</tr>
+	</tbody>
+</table>
+<pagination-controls *ngIf="orders$ | async as order" (pageChange)="p = $event"  autoHide="true"></pagination-controls>
+<ng4-loading-spinner [loadingText]="'Loading...'"> </ng4-loading-spinner>

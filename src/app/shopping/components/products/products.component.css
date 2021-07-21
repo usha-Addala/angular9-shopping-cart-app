@@ -1,0 +1,6 @@
+.mauto {
+	margin: auto;
+}
+#mainDIV .col-md-3,  #mainDIV  .col-sm-6{
+	margin-bottom: 15px;
+}

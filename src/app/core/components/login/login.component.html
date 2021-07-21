@@ -1,0 +1,8 @@
+<div class="loginPage">
+	<p class="text-center">Login via social media</p>
+	<div class="loginBtn">
+	<button class="btn btn-danger btn-block" (click)="gmailLogin()"><i class="fa fa-google" aria-hidden="true"></i><span>Login with Google</span></button>
+	<button class="btn btn-primary btn-block" (click)="fbLogin()"><i class="fa fa-facebook" aria-hidden="true"></i><span>Login with Facebook</span></button>
+	</div>
+</div>
+<ng4-loading-spinner [loadingText]="'Loading...'"> </ng4-loading-spinner>
