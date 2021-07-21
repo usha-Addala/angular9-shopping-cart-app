@@ -9,8 +9,7 @@
     "test": "mocha",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --prod",
-    "heroku-postbuild": "ng build --prod"
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -39,7 +38,6 @@
     "ng2-validation": "^4.2.0",
     "ng4-loading-spinner": "^1.1.1",
     "ngx-pagination": "^3.0.3",
-    "path": "^0.12.7",
     "rxjs": "^5.5.2",
     "typescript": "~2.4.2",
     "zone.js": "^0.8.14"
