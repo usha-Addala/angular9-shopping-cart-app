@@ -1,14 +1,15 @@
-var express = require('express');
+//Install express server
+const express = require('express');
+const path = require('path');
 
-var app = express();
-var port = process.env.PORT || 3000;
+const app = express();
 
-app.use(express.static(__dirname + '/dist'));
+// Serve only the static files form the dist directory
+app.use(express.static('./dist/git'));
 
-app.all('*', (req, res)=>{
-	res.status(200).sendFile(__dirname + '/dist/index.html');
-});
+app.get('/*', (req, res) =>
+    res.sendFile('index.html', {root: 'dist/angular9-shopping-cart-app/'}),
+);
 
-app.listen(port, ()=>{
-	console.log(`App is running on port ${port}`);
-});
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
