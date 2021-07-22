@@ -2,7 +2,7 @@
 
 This project was an `shopping cart application` developed using `angular 9` and `firebase 4`.
 
-Download the code and do npm install ffor nodemodules
+Download the code and do npm install for node-modules
 
 ## Development server
 
