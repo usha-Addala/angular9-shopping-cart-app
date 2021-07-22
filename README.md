@@ -2,6 +2,8 @@
 
 This project was an `shopping cart application` developed using `angular 9` and `firebase 4`.
 
+Download the code and do npm install ffor nodemodules
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
