@@ -10,10 +10,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-```sh
- docker pull vibakar/ng4-shoppingcart-app
- docker run -d -p 3000:3000 vibakar/ng4-shoppingcart-app
- ```
 
 ## Deployed in Heroku
 
