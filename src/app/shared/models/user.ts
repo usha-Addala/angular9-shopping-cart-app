@@ -6,6 +6,7 @@ export interface User{
 		name:string,
 		line1:string,
 		line2:string,
+		mobile:string,
 		city:string
 	}]
 }
