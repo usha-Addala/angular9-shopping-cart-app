@@ -9,6 +9,7 @@
           <div *ngIf="name.errors.required">Name is required.</div>
         </div>
       </div>
+      
       <div class="form-group">
         <label for="addressLine1">Address</label>
         <input #addressLine1="ngModel" name="addressLine1" [(ngModel)]="shipping.addressLine1" type="text" class="form-control" placeholder="Line 1" required>
@@ -30,6 +31,13 @@
           <div *ngIf="city.errors.required">City is required.</div>
         </div>
       </div>
+      <div class="form-group">
+        <label for="mobile">Mobile Number</label>
+        <input #mobile="ngModel" name="mobile" [(ngModel)]="shipping.mobile" type="text" class="form-control" placeholder="mobile" required  />
+        <div class="alert alert-danger" *ngIf="mobile.touched && mobile.invalid">
+          <div *ngIf="mobile.errors.required">Mobile number is required.</div>
+        </div>
+      </div>
       <button *ngIf="address.length > 0" (click)="cancelAddAddress()" class="btn btn-secondary">Cancel</button>
       <button 
         (click)="placeOrder()" [disabled]='name.invalid || addressLine1.invalid || addressLine2.invalid || city.invalid'
@@ -46,6 +54,7 @@
           <p class="card-text">{{ adr.name }}</p>
           <p class="card-text">{{ adr.addressLine1 }}</p>
           <p class="card-text">{{ adr.addressLine2 }}</p>
+          <p class="card-text float-left">{{ adr.mobile }}</p>
           <p class="card-text float-left">{{ adr.city }}</p>
           <button (click)="placeOrder(adr)" class="btn btn-secondary float-right">Deliver Here</button>
         </div>
