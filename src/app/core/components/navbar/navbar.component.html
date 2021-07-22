@@ -3,12 +3,7 @@
     <a class="navbar-brand" routerLink="/">
       <i class="fa fa-home fa-lg"></i>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav mr-auto">
+      <ul class="nav navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" routerLink="/shopping-cart">
           <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
@@ -16,7 +11,7 @@
         </a>
         </li>
       </ul>
-      <ul class="navbar-nav">
+      <ul class="nav navbar-nav navbar-right">
         <ng-template #anonymousUser>
           <li class="nav-item" *ngIf="router.url != '/login'">
             <a class="nav-link bold" routerLink="/login">Login</a>
@@ -35,6 +30,5 @@
           </div>
         </li>
       </ul>
-    </div>
   </div>
 </nav>
