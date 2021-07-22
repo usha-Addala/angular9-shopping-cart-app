@@ -20,6 +20,7 @@
 			<th>Customer</th>
 			<th>Date of Purchase</th>
 			<th>Status</th>
+			<th>Contact</th>
 			<th>Operation</th>
 		</tr>
 	</thead>
@@ -31,6 +32,7 @@
 			<td>{{ order.shipping.name }}</td>
 			<td>{{ order.datePlaced }}</td>
 			<td>{{ order.status }}</td>
+			<td>{{ order.shipping.mobile }}</td>
 			<td>
 				<a class="btn btn-primary btn-sm" href="javascript:void(0)" (click)="viewOrder(order.$key)">View Order
 				</a>&nbsp;&nbsp;&nbsp;
