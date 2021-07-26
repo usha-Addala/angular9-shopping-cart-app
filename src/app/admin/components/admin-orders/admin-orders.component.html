@@ -32,7 +32,10 @@
 			<td>{{ order.shipping.name }}</td>
 			<td>{{ order.datePlaced }}</td>
 			<td>{{ order.status }}</td>
-			<td>{{ order.shipping.mobile }}</td>
+			<td>{{order.shipping.addressLine1}},<br/>
+				{{order.shipping.addressLine2}},<br/>
+				{{order.shipping.city}},<br/>
+				{{ order.shipping.mobile}}</td>
 			<td>
 				<a class="btn btn-primary btn-sm" href="javascript:void(0)" (click)="viewOrder(order.$key)">View Order
 				</a>&nbsp;&nbsp;&nbsp;
