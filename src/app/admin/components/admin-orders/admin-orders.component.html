@@ -37,9 +37,9 @@
 				{{order.shipping.city}},<br/>
 				{{ order.shipping.mobile}}</td>
 			<td>
-				<a class="btn btn-primary btn-sm" href="javascript:void(0)" (click)="viewOrder(order.$key)">View Order
-				</a>&nbsp;&nbsp;&nbsp;
-				<button class="btn btn-secondary btn-sm" (click)="processShipping(order.$key, 'shipped')" [disabled]="order.status === 'shipped' || order.status === 'cancelled'">
+				<button class="btn btn-primary btn-sm"  (click)="viewOrder(order.$key)">View Order
+				</button>
+				<button class="btn btn-secondary btn-sm mt5" (click)="processShipping(order.$key, 'shipped')" [disabled]="order.status === 'shipped' || order.status === 'cancelled'">
 				Start Shipping
 			    </button>
 			</td>
