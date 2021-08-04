@@ -5,7 +5,7 @@ This project was an `shopping cart application` developed using `angular 9` and 
 Install node application
 
 Download the code 
-Go to src folder 
+Go to application folder 
 
 Enter npm install command for node-modules 
 
