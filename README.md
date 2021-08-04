@@ -7,7 +7,7 @@ Install node application
 Download the code 
 Go to src folder 
 
-Enter non install for node-modules on node command prompt
+Enter npm install command for node-modules 
 
 ## Development server
 
